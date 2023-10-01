@@ -26,7 +26,7 @@ def main():
         # Display the podcast title
         st.subheader("Episode Title")
         st.write(podcast_info['podcast_details']['episode_title'])
-        st.audio(podcast_info['url'])
+        st.audio(podcast_info['podcast_details']['audio_url'])
         # Display the podcast summary and the cover image in a side-by-side layout
         col1, col2 = st.columns([7, 3])
 
@@ -58,7 +58,7 @@ def main():
         st.write(podcast_info['podcast_highlights'])
 
         # Display the five key moments
-        st.subheader("Key Moments")
+        st.subheader("Related Hashtags")
         key_moments = podcast_info['podcast_hashtags']
         for moment in key_moments.split('\n'):
             st.markdown(
